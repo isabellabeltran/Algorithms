@@ -1,2 +1,2 @@
 # Algorithms
-Solving an algorithm every day 
+Solving a different algorithm every day 
