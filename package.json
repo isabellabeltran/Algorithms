@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/isabellabeltran/Algorithms/issues"
   },
-  "homepage": "https://github.com/isabellabeltran/Algorithms#readme"
+  "homepage": "https://github.com/isabellabeltran/Algorithms#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.5"
+  }
 }
