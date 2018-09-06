@@ -1,11 +1,14 @@
 // Solve the following prompts using recursion 
 
-/*
-Calculate the factorial of a positive number 
-Factorial is the product of all positive integers less than or equal than n 
-It can be said that an empry set can only be ordered one way so 0! = 1 
-Negative number should return null 
-*/
+/**
+ * 1. Factorial 
+ * Calculate the factorial of a positive number 
+ * Factorial is the product of all positive integers less than or equal than n 
+ * It can be said that an empry set can only be ordered one way so 0! = 1 
+ * Negative number should return null 
+ * Input => integer 
+ * Output => integer 
+ */
 
 const factorial = (n) => {
   if (n < 0) {
@@ -20,6 +23,22 @@ const factorial = (n) => {
   return n * factorial(n - 1); 
 }
 
-// console.log(factorial(3))
+/**
+ * 2. Sum 
+ * Compute the sum of all integers in an array
+ * Input => array [1, 2, 3]
+ * Output => integer 6  
+ */
 
-module.exports = factorial; 
+const sum = (array) => { 
+  if (array.length === 0) {
+    return 0; 
+  }
+  return array[0] + sum(array.slice(1)); 
+}
+
+module.exports = {
+  factorial,
+  sum
+}; 
+
