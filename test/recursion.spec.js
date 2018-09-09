@@ -19,7 +19,7 @@ describe('Recursion ', () => {
       expect(factorial(0)).to.equal(1);
     });
   });
-  describe.only('Compute the sum of all integers in an array ', () => {
+  describe('Compute the sum of all integers in an array ', () => {
     it('should only take an array as a parameter ', () => {
       let spy = sinon.spy(sum); 
       spy([8, 9, 10]);
