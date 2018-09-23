@@ -45,11 +45,22 @@ const sum = (array) => {
  */
 
 const sumBelow = (n) => {
-
+  let result = n - 1; 
+  if (n < 0) {
+    return null; 
+  }
+  if (n === 0) {
+    return 0; 
+  }
+  if (n === 1) {
+    return 0; 
+  }
+  return result += sumBelow(n - 1); 
 }
 
 module.exports = {
   factorial,
-  sum
+  sum, 
+  sumBelow
 }; 
 
