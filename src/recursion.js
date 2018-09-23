@@ -37,6 +37,17 @@ const sum = (array) => {
   return array[0] + sum(array.slice(1)); 
 }
 
+/**
+ * 3. Sum Below
+ * Compute the sum of all the integers below the given integer 
+ * Input => 10
+ * Output => 45  
+ */
+
+const sumBelow = (n) => {
+
+}
+
 module.exports = {
   factorial,
   sum
