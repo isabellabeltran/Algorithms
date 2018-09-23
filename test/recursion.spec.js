@@ -2,7 +2,7 @@ const chai = require('chai');
 const expect = chai.expect;
 const should = chai.should(); 
 const sinon = require('sinon'); 
-const { factorial, sum } = require('../src/recursion');
+const { factorial, sum, sumBelow } = require('../src/recursion');
 
 describe('Recursion ', () => {
   describe('Calculate the factorial of a number', () => {
@@ -45,6 +45,33 @@ describe('Recursion ', () => {
     });
     it('should return 0 if is an empty array ', () => {
       expect(sum([])).to.equal(0); 
+    });
+  });
+  describe.only('Sum Below ', () => {
+    it('should take an integer as a parameter ', () => {
+      let spy = sinon.spy(sumBelow); 
+      spy(10);
+      expect(spy.firstCall.args[0]).to.be.a('number');
+    });
+    it('should return an integer as a parameter ', () => {
+      let spy = sinon.spy(sumBelow); 
+      spy(10);
+      expect(spy.returnValues[0]).to.be.a('number');
+    });
+    it('should return null if the number is smaller than 0 ', () => {
+      let spy = sinon.spy(sumBelow); 
+      spy(-54);
+      expect(spy.returnValues[0]).to.be.a('null');
+    });
+    it('should return zero if the given number is 0 ', () => {
+      let spy = sinon.spy(sumBelow); 
+      spy(0);
+      expect(spy.returnValues[0]).to.equal(0);
+    });
+    it('should add all the integers below the given number ', () => {
+      let spy = sinon.spy(sumBelow); 
+      spy(7);
+      expect(spy.returnValues[0]).to.be.equal(21);
     });
   });
 });
