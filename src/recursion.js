@@ -39,7 +39,7 @@ const sum = (array) => {
 
 /**
  * 3. Sum Below
- * Compute the sum of all the integers below the given integer 
+ * Compute the sum of all the numbers below the given number
  * Input => 10
  * Output => 45  
  */
